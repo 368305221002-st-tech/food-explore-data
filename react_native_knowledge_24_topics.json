@@ -1,0 +1,458 @@
+[
+  {
+    "id": "RN01",
+    "category_id": "C01",
+    "category": "พื้นฐาน React Native",
+    "topic": "React Native คืออะไร",
+    "summary": "React Native คือเฟรมเวิร์กสำหรับสร้างแอปมือถือด้วย React และ JavaScript โดยใช้คอมโพเนนต์ที่แสดงผลเป็น UI ของระบบปฏิ",
+    "concept": "React Native คือเฟรมเวิร์กสำหรับสร้างแอปมือถือด้วย React และ JavaScript โดยใช้คอมโพเนนต์ที่แสดงผลเป็น UI ของระบบปฏิบัติการ",
+    "purpose": [
+      "เข้าใจแนวคิดการพัฒนาแอปข้ามแพลตฟอร์ม"
+    ],
+    "code_example": "import { View, Text } from \"react-native\";",
+    "explanation": "การ import เป็นการนำ Component ที่ต้องใช้เข้ามา",
+    "application": "ใช้ React Native สร้างแอป My Content และคลังบทเรียน",
+    "keywords": [
+      "React",
+      "React Native"
+    ],
+    "image": "images/rn01.png"
+  },
+  {
+    "id": "RN02",
+    "category_id": "C01",
+    "category": "พื้นฐาน React Native",
+    "topic": "โครงสร้าง Project และ App.js",
+    "summary": "ไฟล์ App.js เป็นจุดเริ่มต้นของแอปในตัวอย่าง ขณะที่ screens, data, styles และ assets แยกตามหน้าที่",
+    "concept": "ไฟล์ App.js เป็นจุดเริ่มต้นของแอปในตัวอย่าง ขณะที่ screens, data, styles และ assets แยกตามหน้าที่",
+    "purpose": [
+      "รู้จักตำแหน่งไฟล์และการจัดโครงสร้างโครงการ"
+    ],
+    "code_example": "export default function App() { return <TopicListScreen />; }",
+    "explanation": "App ส่งคืนคอมโพเนนต์ที่ต้องการให้แสดงเป็นหน้าหลัก",
+    "application": "แยกไฟล์ App.js, screens และ navigation อย่างชัดเจน",
+    "keywords": [
+      "โครงสร้าง",
+      "React Native"
+    ],
+    "image": "images/rn02.png"
+  },
+  {
+    "id": "RN03",
+    "category_id": "C01",
+    "category": "พื้นฐาน React Native",
+    "topic": "Components และ JSX",
+    "summary": "Component คือหน่วยย่อยของหน้าจอ JSX ใช้เขียนหน้าตาของ Component ใน JavaScript",
+    "concept": "Component คือหน่วยย่อยของหน้าจอ JSX ใช้เขียนหน้าตาของ Component ใน JavaScript",
+    "purpose": [
+      "สร้างคอมโพเนนต์และเรียกใช้งานได้"
+    ],
+    "code_example": "function Welcome() { return <Text>สวัสดี</Text>; }",
+    "explanation": "ฟังก์ชัน Welcome คืนค่า JSX เป็นข้อความที่แสดงบนหน้าจอ",
+    "application": "แยก TopicCard เป็นคอมโพเนนต์ใช้ซ้ำ",
+    "keywords": [
+      "Components",
+      "React Native"
+    ],
+    "image": "images/rn03.png"
+  },
+  {
+    "id": "RN04",
+    "category_id": "C01",
+    "category": "พื้นฐาน React Native",
+    "topic": "Props และการส่งข้อมูล",
+    "summary": "Props คือข้อมูลที่คอมโพเนนต์แม่ส่งให้คอมโพเนนต์ลูกผ่านแอตทริบิวต์",
+    "concept": "Props คือข้อมูลที่คอมโพเนนต์แม่ส่งให้คอมโพเนนต์ลูกผ่านแอตทริบิวต์",
+    "purpose": [
+      "ส่งข้อมูลให้ Component ใช้แสดงผล"
+    ],
+    "code_example": "function TopicCard({ title }) { return <Text>{title}</Text>; }",
+    "explanation": "title รับค่าจาก Component แม่และแสดงใน Text",
+    "application": "ส่งชื่อหัวข้อและรูปภาพเข้า TopicCard",
+    "keywords": [
+      "Props",
+      "React Native"
+    ],
+    "image": "images/rn04.png"
+  },
+  {
+    "id": "RN05",
+    "category_id": "C02",
+    "category": "การออกแบบ UI",
+    "topic": "Core Components",
+    "summary": "View ใช้จัดกลุ่ม Text แสดงข้อความ Image แสดงรูป และ Pressable รองรับการกด",
+    "concept": "View ใช้จัดกลุ่ม Text แสดงข้อความ Image แสดงรูป และ Pressable รองรับการกด",
+    "purpose": [
+      "เลือก Component ให้เหมาะกับส่วนต่าง ๆ ของหน้าจอ"
+    ],
+    "code_example": "<Pressable onPress={() => alert(\"เปิดหัวข้อ\")}><Text>อ่านต่อ</Text></Pressable>",
+    "explanation": "onPress ทำงานเมื่อผู้ใช้กด Pressable",
+    "application": "ใช้ Pressable เปิดหน้ารายละเอียดบทเรียน",
+    "keywords": [
+      "Core",
+      "React Native"
+    ],
+    "image": "images/rn05.png"
+  },
+  {
+    "id": "RN06",
+    "category_id": "C02",
+    "category": "การออกแบบ UI",
+    "topic": "StyleSheet และ Flexbox",
+    "summary": "StyleSheet จัดเก็บรูปแบบ ส่วน Flexbox ช่วยจัดแนวและกระจายพื้นที่ของ UI",
+    "concept": "StyleSheet จัดเก็บรูปแบบ ส่วน Flexbox ช่วยจัดแนวและกระจายพื้นที่ของ UI",
+    "purpose": [
+      "สร้างหน้าจอให้อ่านง่ายและจัดวางสม่ำเสมอ"
+    ],
+    "code_example": "const styles = StyleSheet.create({ row: { flexDirection: \"row\", gap: 8 } });",
+    "explanation": "flexDirection: row จัดลูกในแนวนอน ส่วน gap กำหนดระยะห่าง",
+    "application": "จัดรูปภาพและข้อความใน TopicCard ให้อยู่แถวเดียวกัน",
+    "keywords": [
+      "StyleSheet",
+      "React Native"
+    ],
+    "image": "images/rn06.png"
+  },
+  {
+    "id": "RN07",
+    "category_id": "C02",
+    "category": "การออกแบบ UI",
+    "topic": "ScrollView และ FlatList",
+    "summary": "ScrollView เหมาะกับเนื้อหาไม่มาก ส่วน FlatList เหมาะกับรายการจำนวนมากและเรนเดอร์เท่าที่จำเป็น",
+    "concept": "ScrollView เหมาะกับเนื้อหาไม่มาก ส่วน FlatList เหมาะกับรายการจำนวนมากและเรนเดอร์เท่าที่จำเป็น",
+    "purpose": [
+      "เลือกส่วนแสดงรายการให้เหมาะกับขนาดข้อมูล"
+    ],
+    "code_example": "<FlatList data={topics} keyExtractor={item => String(item.id)} renderItem={({ item }) => <Text>{item.topic}</Text>} />",
+    "explanation": "data เป็นแหล่งรายการ และ renderItem บอกวิธีแสดงแต่ละรายการ",
+    "application": "แสดง 24 บทเรียนจาก JSON ด้วย FlatList",
+    "keywords": [
+      "ScrollView",
+      "React Native"
+    ],
+    "image": "images/rn07.png"
+  },
+  {
+    "id": "RN08",
+    "category_id": "C02",
+    "category": "การออกแบบ UI",
+    "topic": "การสร้าง Card และ List UI",
+    "summary": "Card คือรูปแบบจัดกลุ่มข้อมูลสำคัญของหนึ่งรายการเพื่อให้สแกนอ่านง่าย",
+    "concept": "Card คือรูปแบบจัดกลุ่มข้อมูลสำคัญของหนึ่งรายการเพื่อให้สแกนอ่านง่าย",
+    "purpose": [
+      "ออกแบบรายการที่มีชื่อ ภาพ และคำอธิบายสั้น"
+    ],
+    "code_example": "<View style={styles.card}><Text>{item.topic}</Text><Text>{item.summary}</Text></View>",
+    "explanation": "แต่ละ Card แสดงชื่อและสรุปจาก Object ที่รับเข้ามา",
+    "application": "ออกแบบการ์ดข้อมูลของทั้งสองชุดให้สม่ำเสมอ",
+    "keywords": [
+      "การสร้าง",
+      "React Native"
+    ],
+    "image": "images/rn08.png"
+  },
+  {
+    "id": "RN09",
+    "category_id": "C03",
+    "category": "Data Management",
+    "topic": "Object และ Array of Objects",
+    "summary": "Object เก็บข้อมูลแบบ key-value และ Array of Objects รวม Object หลายรายการเป็นชุดข้อมูล",
+    "concept": "Object เก็บข้อมูลแบบ key-value และ Array of Objects รวม Object หลายรายการเป็นชุดข้อมูล",
+    "purpose": [
+      "อ่านและสร้างข้อมูลหลายรายการได้"
+    ],
+    "code_example": "const topics = [{ id: 1, topic: \"View\" }, { id: 2, topic: \"Text\" }];",
+    "explanation": "เครื่องหมาย [] หมายถึง Array ส่วน {} เป็น Object",
+    "application": "จัดเก็บหัวข้อ My Content อย่างน้อย 10 รายการ",
+    "keywords": [
+      "Object",
+      "React Native"
+    ],
+    "image": "images/rn09.png"
+  },
+  {
+    "id": "RN10",
+    "category_id": "C03",
+    "category": "Data Management",
+    "topic": "JSON และโครงสร้างข้อมูล",
+    "summary": "JSON เป็นรูปแบบข้อความแลกเปลี่ยนข้อมูล รองรับ Object, Array, String, Number, Boolean และ null",
+    "concept": "JSON เป็นรูปแบบข้อความแลกเปลี่ยนข้อมูล รองรับ Object, Array, String, Number, Boolean และ null",
+    "purpose": [
+      "แยก JSON ที่ถูกต้องออกจาก JavaScript Object ได้"
+    ],
+    "code_example": "{\"id\":1,\"topic\":\"View\",\"image\":\"https://example.com/view.png\"}",
+    "explanation": "ชื่อ key และค่า String ใน JSON ต้องใช้เครื่องหมายอัญประกาศคู่ และห้ามมี require()",
+    "application": "สร้าง topic.json ที่สามารถ parse เป็นข้อมูลได้",
+    "keywords": [
+      "JSON",
+      "React Native"
+    ],
+    "image": "images/rn10.png"
+  },
+  {
+    "id": "RN11",
+    "category_id": "C03",
+    "category": "Data Management",
+    "topic": "การใช้ map()",
+    "summary": "map() แปลงสมาชิกแต่ละตัวของ Array เป็นค่าหรือ JSX ที่ต้องการแสดง",
+    "concept": "map() แปลงสมาชิกแต่ละตัวของ Array เป็นค่าหรือ JSX ที่ต้องการแสดง",
+    "purpose": [
+      "แสดงรายการจากข้อมูลโดยไม่เขียน UI ซ้ำ"
+    ],
+    "code_example": "{topics.map(item => <Text key={item.id}>{item.topic}</Text>)}",
+    "explanation": "key ช่วยให้ React ติดตามเอกลักษณ์ของแต่ละรายการ",
+    "application": "สร้างรายการหัวข้อจาก Array ของ JSON",
+    "keywords": [
+      "การใช้",
+      "React Native"
+    ],
+    "image": "images/rn11.png"
+  },
+  {
+    "id": "RN12",
+    "category_id": "C03",
+    "category": "Data Management",
+    "topic": "การแยกไฟล์ Data",
+    "summary": "การแยกข้อมูลออกจากหน้าจอเป็นตัวอย่างการแยกหน้าที่ระหว่าง Data และ UI",
+    "concept": "การแยกข้อมูลออกจากหน้าจอเป็นตัวอย่างการแยกหน้าที่ระหว่าง Data และ UI",
+    "purpose": [
+      "อ่านข้อมูลจากไฟล์ใน Project ได้"
+    ],
+    "code_example": "import topics from \"../data/topic\";",
+    "explanation": "import อ่านค่าที่ไฟล์ topic.js export ออกมา",
+    "application": "ทดลองใช้ข้อมูลภายในก่อนเปลี่ยนไปใช้ GitHub",
+    "keywords": [
+      "การแยกไฟล์",
+      "React Native"
+    ],
+    "image": "images/rn12.png"
+  },
+  {
+    "id": "RN13",
+    "category_id": "C03",
+    "category": "Data Management",
+    "topic": "การอ่าน JSON จาก GitHub",
+    "summary": "GitHub สามารถโฮสต์ไฟล์ JSON แบบสาธารณะเพื่อให้แอปอ่านผ่าน Raw URL ได้",
+    "concept": "GitHub สามารถโฮสต์ไฟล์ JSON แบบสาธารณะเพื่อให้แอปอ่านผ่าน Raw URL ได้",
+    "purpose": [
+      "เตรียม Repository และ Raw URL ที่อ่านข้อมูลได้"
+    ],
+    "code_example": "const DATA_URL = \"https://raw.githubusercontent.com/owner/repo/main/data/topic.json\";",
+    "explanation": "URL นี้เป็นรูปแบบตัวอย่าง ต้องเปลี่ยน owner และ repo ให้ตรงแหล่งข้อมูลจริง",
+    "application": "เก็บข้อมูลแต่ละกลุ่มบน GitHub แล้วทดลองเปิด Raw URL",
+    "keywords": [
+      "การอ่าน",
+      "React Native"
+    ],
+    "image": "images/rn13.png"
+  },
+  {
+    "id": "RN14",
+    "category_id": "C04",
+    "category": "State และการดึงข้อมูล",
+    "topic": "State และ useState()",
+    "summary": "State เก็บข้อมูลที่เปลี่ยนระหว่างการทำงานของ Component เมื่อเรียก setter React จะจัดตารางการเรนเดอร์ใหม่",
+    "concept": "State เก็บข้อมูลที่เปลี่ยนระหว่างการทำงานของ Component เมื่อเรียก setter React จะจัดตารางการเรนเดอร์ใหม่",
+    "purpose": [
+      "เก็บข้อมูลรายการและสถานะการแสดงผล"
+    ],
+    "code_example": "const [topics, setTopics] = useState([]);",
+    "explanation": "topics คือค่าปัจจุบัน และ setTopics เป็นฟังก์ชันอัปเดต State",
+    "application": "เก็บรายการเนื้อหาที่อ่านจาก GitHub",
+    "keywords": [
+      "State",
+      "React Native"
+    ],
+    "image": "images/rn14.png"
+  },
+  {
+    "id": "RN15",
+    "category_id": "C04",
+    "category": "State และการดึงข้อมูล",
+    "topic": "useEffect()",
+    "summary": "useEffect ใช้เชื่อม Component กับระบบภายนอก เช่น การโหลดข้อมูลผ่านเครือข่าย",
+    "concept": "useEffect ใช้เชื่อม Component กับระบบภายนอก เช่น การโหลดข้อมูลผ่านเครือข่าย",
+    "purpose": [
+      "เรียกการโหลดข้อมูลเมื่อ Component เริ่มแสดง"
+    ],
+    "code_example": "useEffect(() => { loadTopics(); }, []);",
+    "explanation": "dependency array ว่างทำให้ Effect ทำงานเมื่อ mount และในโหมดพัฒนาบางกรณีอาจถูกตรวจการทำงานซ้ำ",
+    "application": "สั่งโหลดบทเรียนเมื่อเปิดหน้า Knowledge",
+    "keywords": [
+      "useEffect()",
+      "React Native"
+    ],
+    "image": "images/rn15.png"
+  },
+  {
+    "id": "RN16",
+    "category_id": "C04",
+    "category": "State และการดึงข้อมูล",
+    "topic": "fetch() และ Async/Await",
+    "summary": "fetch() เรียกข้อมูลจาก URL ส่วน async/await ช่วยเขียนการทำงานแบบ asynchronous ให้อ่านง่าย",
+    "concept": "fetch() เรียกข้อมูลจาก URL ส่วน async/await ช่วยเขียนการทำงานแบบ asynchronous ให้อ่านง่าย",
+    "purpose": [
+      "ดึงและแปลง JSON เป็น Array เพื่อนำไปแสดง"
+    ],
+    "code_example": "const response = await fetch(DATA_URL);\nif (!response.ok) throw new Error(\"HTTP \" + response.status);\nconst data = await response.json();\nsetTopics(data);",
+    "explanation": "ตรวจ response.ok ก่อนอ่าน JSON และบันทึกลง State",
+    "application": "ดึง Data ชุดที่ 1 และ 2 จาก URL คนละชุด",
+    "keywords": [
+      "fetch()",
+      "React Native"
+    ],
+    "image": "images/rn16.png"
+  },
+  {
+    "id": "RN17",
+    "category_id": "C04",
+    "category": "State และการดึงข้อมูล",
+    "topic": "Loading, Error และ Retry",
+    "summary": "การแสดงสถานะช่วยให้ผู้ใช้ทราบว่าแอปกำลังทำอะไรและสามารถลองโหลดใหม่ได้",
+    "concept": "การแสดงสถานะช่วยให้ผู้ใช้ทราบว่าแอปกำลังทำอะไรและสามารถลองโหลดใหม่ได้",
+    "purpose": [
+      "จัดการช่วงรอและกรณีเครือข่ายผิดพลาด"
+    ],
+    "code_example": "if (loading) return <ActivityIndicator />;\nif (error) return <Button title=\"ลองใหม่\" onPress={loadTopics} />;",
+    "explanation": "แสดง Indicator ขณะรอและปุ่ม Retry เมื่อมี Error",
+    "application": "เพิ่มสถานะ Loading และ Error ในหน้ารายการ",
+    "keywords": [
+      "Loading,",
+      "React Native"
+    ],
+    "image": "images/rn17.png"
+  },
+  {
+    "id": "RN18",
+    "category_id": "C05",
+    "category": "Navigation",
+    "topic": "Navigation คืออะไร",
+    "summary": "React Navigation เป็นไลบรารีที่ช่วยกำหนดเส้นทางและสถานะการนำทางระหว่างหน้าจอ",
+    "concept": "React Navigation เป็นไลบรารีที่ช่วยกำหนดเส้นทางและสถานะการนำทางระหว่างหน้าจอ",
+    "purpose": [
+      "เข้าใจการจัดกลุ่ม Navigator และหน้าจอ"
+    ],
+    "code_example": "<NavigationContainer><TopicStack /></NavigationContainer>",
+    "explanation": "NavigationContainer เป็นคอนเทนเนอร์สำหรับ Navigation ในตัวอย่าง React Navigation แบบทั่วไป",
+    "application": "วางโครงสร้างนำทางก่อนพัฒนาทุกหน้าจอ",
+    "keywords": [
+      "Navigation",
+      "React Native"
+    ],
+    "image": "images/rn18.png"
+  },
+  {
+    "id": "RN19",
+    "category_id": "C05",
+    "category": "Navigation",
+    "topic": "Stack Navigation",
+    "summary": "Stack ใช้จัดลำดับหน้าที่ผู้ใช้เปิดต่อกันและย้อนกลับได้",
+    "concept": "Stack ใช้จัดลำดับหน้าที่ผู้ใช้เปิดต่อกันและย้อนกลับได้",
+    "purpose": [
+      "เชื่อมหน้ารายการกับหน้ารายละเอียด"
+    ],
+    "code_example": "<Stack.Screen name=\"TopicDetail\" component={TopicDetailScreen} />",
+    "explanation": "กำหนดชื่อเส้นทางและคอมโพเนนต์ของหน้ารายละเอียด",
+    "application": "เปิด TopicDetail จากการกดรายการใน TopicList",
+    "keywords": [
+      "Stack",
+      "React Native"
+    ],
+    "image": "images/rn19.png"
+  },
+  {
+    "id": "RN20",
+    "category_id": "C05",
+    "category": "Navigation",
+    "topic": "Tab Navigation",
+    "summary": "Tab แสดงตัวเลือกการนำทางระหว่างส่วนหลักของแอป มักแสดงด้านล่าง",
+    "concept": "Tab แสดงตัวเลือกการนำทางระหว่างส่วนหลักของแอป มักแสดงด้านล่าง",
+    "purpose": [
+      "สร้างเมนูสลับ My Content และ Knowledge"
+    ],
+    "code_example": "<Tab.Screen name=\"Knowledge\" component={KnowledgeScreen} />",
+    "explanation": "เพิ่มหน้าชื่อ Knowledge เข้า Tab Navigator",
+    "application": "สร้าง Tab สำหรับชุดข้อมูลสองประเภท",
+    "keywords": [
+      "Tab",
+      "React Native"
+    ],
+    "image": "images/rn20.png"
+  },
+  {
+    "id": "RN21",
+    "category_id": "C05",
+    "category": "Navigation",
+    "topic": "Drawer Navigation",
+    "summary": "Drawer จัดเมนูนำทางในแผงด้านข้าง ช่วยเข้าถึงหน้าหลักหรือหมวดต่าง ๆ",
+    "concept": "Drawer จัดเมนูนำทางในแผงด้านข้าง ช่วยเข้าถึงหน้าหลักหรือหมวดต่าง ๆ",
+    "purpose": [
+      "สร้างเมนูด้านข้างและเข้าใจการซ้อน Navigator"
+    ],
+    "code_example": "<Drawer.Screen name=\"Main\" component={MainTabs} />",
+    "explanation": "Drawer เปิด MainTabs ซึ่งอาจบรรจุ Tab และ Stack ภายใน",
+    "application": "มีเมนูหลักและหน้าเกี่ยวกับแอป",
+    "keywords": [
+      "Drawer",
+      "React Native"
+    ],
+    "image": "images/rn21.png"
+  },
+  {
+    "id": "RN22",
+    "category_id": "C05",
+    "category": "Navigation",
+    "topic": "Navigation Parameters",
+    "summary": "Navigation Parameters ใช้ส่งค่าที่เกี่ยวข้องกับรายการระหว่าง Screen",
+    "concept": "Navigation Parameters ใช้ส่งค่าที่เกี่ยวข้องกับรายการระหว่าง Screen",
+    "purpose": [
+      "ส่ง id หรือ Object ไปหน้ารายละเอียด"
+    ],
+    "code_example": "navigation.navigate(\"TopicDetail\", { itemId: item.id });",
+    "explanation": "ส่ง itemId ไปยัง route.params ของหน้าถัดไป",
+    "application": "ใช้ id หาเนื้อหารายละเอียดจาก Data ที่โหลดมา",
+    "keywords": [
+      "Navigation",
+      "React Native"
+    ],
+    "image": "images/rn22.png"
+  },
+  {
+    "id": "RN23",
+    "category_id": "C06",
+    "category": "การรวมระบบและทดสอบ",
+    "topic": "Separation of Concerns (SoC)",
+    "summary": "SoC เป็นแนวคิดแยกความรับผิดชอบ เช่น Data, UI, Styles และ Navigation เพื่อลดการผูกติดกัน",
+    "concept": "SoC เป็นแนวคิดแยกความรับผิดชอบ เช่น Data, UI, Styles และ Navigation เพื่อลดการผูกติดกัน",
+    "purpose": [
+      "จัด Project ให้ง่ายต่อการแก้ไขและนำกลับมาใช้"
+    ],
+    "code_example": "import TopicStack from \"./navigation/TopicStack\";",
+    "explanation": "ไฟล์ App ไม่ต้องรวมโค้ดทุก Screen ไว้ที่เดียว",
+    "application": "จัด screens/, navigation/, data/, styles/ เป็นสัดส่วน",
+    "keywords": [
+      "Separation",
+      "React Native"
+    ],
+    "image": "images/rn23.png"
+  },
+  {
+    "id": "RN24",
+    "category_id": "C06",
+    "category": "การรวมระบบและทดสอบ",
+    "topic": "Debugging และ Testing",
+    "summary": "การ Debug ใช้ตรวจหาสาเหตุข้อผิดพลาด ส่วน Testing ตรวจว่าแอปทำงานตามที่คาดหวัง",
+    "concept": "การ Debug ใช้ตรวจหาสาเหตุข้อผิดพลาด ส่วน Testing ตรวจว่าแอปทำงานตามที่คาดหวัง",
+    "purpose": [
+      "ทดสอบโหลดข้อมูล รูปภาพ ลิงก์ และการเปลี่ยนหน้าจอ"
+    ],
+    "code_example": "console.log(\"topics loaded:\", topics.length);",
+    "explanation": "log ช่วยตรวจจำนวนข้อมูลที่โหลดได้ แต่ควรใช้ร่วมกับการตรวจ Error จริง",
+    "application": "ทดลองเปลี่ยน JSON บน GitHub และทดสอบการโหลดใหม่",
+    "keywords": [
+      "Debugging",
+      "React Native"
+    ],
+    "image": "images/rn24.png"
+  }
+]
